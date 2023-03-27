@@ -1,15 +1,23 @@
-function addClass(){
-
+function addClass(element, classe){
+    element.classList.add(classe);
 }
 
-function removeClass(){
-
+function removeClass(element, classe){
+    element.classList.remove(classe);
 }
 
 function clique(){
-
+    addClass(carre, "tourne");
 }
 
-let lesCarres = document.querySelector(".carre");
+const carre = document.createElement("div");
+carre.classList.add("carre");
 
-lesCarres.addEventListener("click", clique());
+let contenu = document.querySelector(".contenu");
+
+for(i = 1; i <= 4; i++){
+    let nouvCarre = carre.cloneNode();
+    nouvCarre.innerText = i;
+    contenu.appendChild(nouvCarre);
+    nouvCarre.addEventListener("click", clique());
+}
