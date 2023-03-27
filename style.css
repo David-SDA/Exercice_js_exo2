@@ -25,3 +25,27 @@
     align-items: center;
     cursor: pointer;
 }
+
+.carre.tourne{
+    background-color: rgb(165, 42, 42);
+    color: rgb(255, 255, 255);
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: scale(0.9);
+    animation-name: tourner;
+    animation-duration: 2s;
+}
+
+@keyframes tourner{
+    from{
+        transform: scale(1) rotate(0deg);
+    }
+    to{
+        transform: scale(0.9) rotate(360deg);
+    }
+}
