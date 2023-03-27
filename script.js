@@ -22,8 +22,10 @@ for(i = 1; i <= 4; i++){
     nouvCarre.addEventListener("click", function(){ // quand on clique ce carré :
         if(nouvCarre.classList.contains("tourne")){ // soit il a déjà tourner
             removeClass(nouvCarre, "tourne");// donc on enlève la classe "tourne"
+            addClass(nouvCarre, "base");
         }
         else{ // soit il n'a pas encore tourner
+            removeClass(nouvCarre, "base");
             addClass(nouvCarre, "tourne");// donc on le fait tourner
         }
     });

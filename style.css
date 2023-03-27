@@ -26,6 +26,11 @@
     cursor: pointer;
 }
 
+.carre.base{
+    animation-name: retour;
+    animation-duration: 2s;
+}
+
 .carre.tourne{
     background-color: rgb(165, 42, 42);
     color: rgb(255, 255, 255);
@@ -43,9 +48,22 @@
 
 @keyframes tourner{
     from{
-        transform: scale(1) rotate(0deg);
+        background-color: rgb(136, 174, 136);
+        transform: scale(1);
     }
     to{
+        background-color: rgb(165, 42, 42);
         transform: scale(0.9) rotate(360deg);
+    }
+}
+
+@keyframes retour{
+    from{
+        background-color: rgb(165, 42, 42);
+        transform: scale(0.9);
+    }
+    to{
+        background-color: rgb(136, 174, 136);
+        transform: scale(1) rotate(-360deg);
     }
 }
